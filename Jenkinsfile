@@ -1,7 +1,7 @@
 pipeline {
   agent { label 'my_slave1' }
   stages {
-    stage{'print_statement'}
+    stage('print_statement')
     parallel {
     stage('print') {
       steps {
