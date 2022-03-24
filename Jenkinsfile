@@ -6,7 +6,7 @@ pipeline {
                 stage('one') {
                     agent { label 'my_slave1' }
                     steps {
-                        sh " 'echo HELLO GOOD MORNING' "
+                        sh " echo 'HELLO GOOD MORNING' "
                     }
                 }
                 stage('Two') {
