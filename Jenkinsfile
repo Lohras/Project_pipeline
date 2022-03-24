@@ -1,19 +1,18 @@
 pipeline {
-  agent none
+  agent { label 'my_slave1' }
   stages {
-    parallel {
+    stage{'print_statement'}
+    parallel ( 
     stage('print') {
-      agent { label 'my_slave1' }
       steps {
         sh " echo 'HELLO GOOD MORNING' "
       }
     }
       stage('print1') {
-        agent { label 'my_slave1' }
         steps {
           sh " echo 'I am in DevOps class' "
         }
       }
-    }
+    )
     }
 }
